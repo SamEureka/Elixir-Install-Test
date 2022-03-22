@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  elixir:
+    build: ./elixir
+    labels:
+      io.balena.features.dbus: 1
+    network_mode: host
+    privileged: true
+    volumes:
+      - elixir:/elixir
+volumes:
+  elixir:

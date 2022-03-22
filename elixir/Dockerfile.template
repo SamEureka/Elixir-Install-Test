@@ -1,0 +1,12 @@
+## Elixir Testing!  ##
+## Sam Dennon//2022 ##
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:3.15
+
+RUN install_packages elixir elixir-doc nano
+
+WORKDIR /elixir
+
+COPY lib/main.exs /elixir/lib/main.exs
+
+CMD ["balena-idle"]
